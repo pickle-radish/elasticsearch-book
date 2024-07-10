@@ -1,0 +1,18 @@
+{
+  "properties": {
+    "title": {
+      "type": "text",
+      "analyzer": "nori_korean"
+    },
+    "exp": {
+      "type": "text",
+      "analyzer": "nori_korean"
+    },
+    "category": {
+      "type": "keyword"
+    },
+    "price": {
+      "type": "keyword"
+    }
+  }
+}

@@ -1,0 +1,39 @@
+Configutation:
+  name: Default
+  status: info
+
+  Properties:
+    Property:
+      name: log-path
+      value: "logs"
+
+  Appenders:
+    Console:
+      name: Console_Appender
+      target: SYSTEM_OUT
+      PatternLayout:
+        pattern: "[%-5level] %c{1} - %msg%n"
+
+  Loggers:
+    Root:
+      level: info
+      AppenderRef:
+        - ref: Console_Appender
+        - ref: File_Appender
+        - ref: RollingFile_Appender
+
+  Logger:
+    - name: logger-debug
+      additivity: false
+      level: info
+      AppenderRef:
+        - ref: Console_Appender
+        - ref: File_Appender
+        - ref: RollingFile_Appender
+    - name: log4jdbc
+      additivity: false
+      level: info
+      AppenderRef:
+        - ref: Console_Appender
+        - ref: File_Appender
+        - ref: RollingFile_Appender

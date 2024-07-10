@@ -1,0 +1,12 @@
+#logging:
+#  config: classpath:log4j2.yml
+#org.springframework.data.elasticsearch.client.WIRE: TRACE
+
+spring:
+  application:
+    name: elastic-api
+
+
+
+elastic:
+  host: localhost:9200
